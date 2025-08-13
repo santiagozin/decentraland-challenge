@@ -29,5 +29,5 @@ export async function login(
       credentials: "include",
       body: JSON.stringify({ message, signature }),
     }).then((r) => r.ok);
-    if (ok) alert("Sesión iniciada");
+    if (ok) alert("signed in");
   }
