@@ -33,10 +33,6 @@ const Transfer = () => {
   const [amount, setAmount] = useState("");
   const [errorMessage, setErrorMessage] = useState<string>("");
 
-  useEffect(() => {
-    if (!open) navigate(-1);
-  }, [open, navigate]);
-
   const { data: decimals } = useTokenDecimals(token, chainId, isConnected);
   const { data: symbol } = useTokenSymbol(token, chainId, isConnected);
   const { data: balance } = useTokenBalance(token, address, chainId, isConnected);
